@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a sample cloud budget request using CloudCost Tracker.">
+  <title>CloudCost Tracker | Budget Planner</title>
+</head>
+<body>
+  <header>
+    <h1>Budget Planner</h1>
+    <p>Submit a sample cloud budget request.</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Cloud Services</a></li>
+        <li><a href="costs.html">Monthly Costs</a></li>
+        <li><a href="budget.html">Budget Planner</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Budget Request Form</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Project Information</legend>
+
+          <p>
+            <label for="projectName">Project Name:</label><br>
+            <input type="text" id="projectName" name="projectName" placeholder="Example: Customer Portal" required>
+          </p>
+
+          <p>
+            <label for="ownerEmail">Project Owner Email:</label><br>
+            <input type="email" id="ownerEmail" name="ownerEmail" placeholder="name@example.com" required>
+          </p>
+
+          <p>
+            <label for="serviceType">Main Cloud Service:</label><br>
+            <select id="serviceType" name="serviceType" required>
+              <option value="">Select a service</option>
+              <option value="compute">Compute</option>
+              <option value="storage">Storage</option>
+              <option value="database">Database</option>
+              <option value="networking">Networking</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="monthlyBudget">Monthly Budget:</label><br>
+            <input type="number" id="monthlyBudget" name="monthlyBudget" min="0" placeholder="1500" required>
+          </p>
+
+          <p>
+            <label for="startDate">Start Date:</label><br>
+            <input type="date" id="startDate" name="startDate">
+          </p>
+
+          <p>
+            <label for="notes">Budget Notes:</label><br>
+            <textarea id="notes" name="notes" rows="5" cols="40" placeholder="Describe the reason for this budget request."></textarea>
+          </p>
+
+          <button type="submit">Submit Request</button>
+          <button type="reset">Clear Form</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CloudCost Tracker.</p>
+  </footer>
+</body>
+</html>
