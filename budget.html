@@ -3,82 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Submit a sample cloud budget request using CloudCost Tracker.">
+  <meta name="description" content="Submit a cloud budget request using CloudCost Tracker.">
   <title>CloudCost Tracker | Budget Planner</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Budget Planner</h1>
-    <p>Submit a sample cloud budget request.</p>
+  <header class="app-header">
+    <div class="brand">☁️ CloudCost <span>Tracker</span></div>
+
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Cloud Services</a></li>
-        <li><a href="costs.html">Monthly Costs</a></li>
-        <li><a href="budget.html">Budget Planner</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="index.html">⌂ Home</a></li>
+        <li><a href="services.html">☁ Cloud Services</a></li>
+        <li><a href="costs.html">▥ Monthly Costs</a></li>
+        <li><a href="budget.html">▣ Budget Planner</a></li>
       </ul>
     </nav>
+    <button id="themeToggle" class="theme-toggle" type="button">
+     ☀ Light Mode
+    </button>
   </header>
 
-  <main>
-    <section>
-      <h2>Budget Request Form</h2>
-      <p>
-        Submit projected cloud spending requirements to support budget planning and resource allocation decisions.
-      </p>
+  <main class="planner-page">
+    <section class="planner-hero">
+      <h1>Budget Planner</h1>
+      <span></span>
+      <p>Plan monthly cloud spend before resources are launched.</p>
+    </section>
+
+    <section class="planner-card">
+      <div class="planner-card-header">
+        <div class="planner-icon">▣</div>
+        <h2>Budget Request Form</h2>
+        <p>
+          Use this form to estimate budget needs for a cloud project. Requests are checked with JavaScript before submission.
+        </p>
+      </div>
+
       <form id="budgetForm">
         <fieldset>
-          <legend>Project Information</legend>
+          <div class="form-grid">
+            <p>
+              <label for="projectName">Project Name *</label>
+              <input type="text" id="projectName" name="projectName" placeholder="Example: Customer Portal" required>
+            </p>
 
-          <p>
-            <label for="projectName">Project Name:</label><br>
-            <input type="text" id="projectName" name="projectName" placeholder="Example: Customer Portal" required>
-          </p>
+            <p>
+              <label for="ownerEmail">Project Owner Email *</label>
+              <input type="email" id="ownerEmail" name="ownerEmail" placeholder="name@example.com" required>
+            </p>
 
-          <p>
-            <label for="ownerEmail">Project Owner Email:</label><br>
-            <input type="email" id="ownerEmail" name="ownerEmail" placeholder="name@example.com" required>
-          </p>
+            <p class="full-width">
+              <label for="serviceType">Main Cloud Service *</label>
+              <select id="serviceType" name="serviceType" required>
+                <option value="">Select a service</option>
+                <option value="compute">Compute</option>
+                <option value="storage">Storage</option>
+                <option value="database">Database</option>
+                <option value="networking">Networking</option>
+              </select>
+            </p>
 
-          <p>
-            <label for="serviceType">Main Cloud Service:</label><br>
-            <select id="serviceType" name="serviceType" required>
-              <option value="">Select a service</option>
-              <option value="compute">Compute</option>
-              <option value="storage">Storage</option>
-              <option value="database">Database</option>
-              <option value="networking">Networking</option>
-            </select>
-          </p>
+            <p>
+              <label for="monthlyBudget">Monthly Budget (USD) *</label>
+              <input type="number" id="monthlyBudget" name="monthlyBudget" min="0" placeholder="e.g. 1500" required>
+            </p>
 
-          <p>
-            <label for="monthlyBudget">Monthly Budget:</label><br>
-            <input type="number" id="monthlyBudget" name="monthlyBudget" min="0" placeholder="1500" required>
-          </p>
+            <p>
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate" name="startDate">
+            </p>
 
-          <p>
-            <label for="startDate">Start Date:</label><br>
-            <input type="date" id="startDate" name="startDate">
-          </p>
+            <p class="full-width">
+              <label for="notes">Budget Notes</label>
+              <textarea id="notes" name="notes" rows="5" placeholder="Describe the reason for this budget request..."></textarea>
+            </p>
+          </div>
 
-          <p>
-            <label for="notes">Budget Notes:</label><br>
-            <textarea id="notes" name="notes" rows="5" cols="40" placeholder="Describe the reason for this budget request."></textarea>
-          </p>
+          <div class="button-row">
+            <button type="reset" class="secondary-btn">Clear Form</button>
+            <button type="submit" class="primary-btn">Submit Request</button>
+          </div>
 
-          <button type="submit">Submit Request</button>
-          <button type="reset">Clear Form</button>
-          <p id="formMessage"></p>
+          <p id="formMessage" class="form-message"></p>
         </fieldset>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 CloudCost Tracker.</p>
+    <p>☁</p>
+    <p>&copy; 2026 CloudCost Tracker. Smart budgeting. Smarter decisions.</p>
   </footer>
+
   <script src="assets/js/script.js"></script>
 </body>
 </html>

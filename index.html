@@ -8,20 +8,25 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>CloudCost Tracker</h1>
-    <p>A simple cloud budgeting and cost planning dashboard.</p>
+  <header class="app-header">
 
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Cloud Services</a></li>
-        <li><a href="costs.html">Monthly Costs</a></li>
-        <li><a href="budget.html">Budget Planner</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="brand">
+    ☁ CloudCost <span>Tracker</span>
+  </div>
+
+  <nav aria-label="Main navigation">
+    
+    <ul>
+      <li><a href="index.html">⌂ Home</a></li>
+      <li><a href="services.html">☁ Cloud Services</a></li>
+      <li><a href="costs.html">▥ Monthly Costs</a></li>
+      <li><a href="budget.html">▣ Budget Planner</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-toggle" type="button">
+    ☀ Light Mode
+  </button>
+</header>
 
   <main class="dashboard-page">
   <section class="hero-dashboard">
@@ -124,3 +129,11 @@
     </article>
   </section>
 </main>
+  <footer class="site-footer">
+    <p class="footer-logo">☁</p>
+    <p>&copy; 2026 CloudCost Tracker. Smart budgeting. Smarter decisions.</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

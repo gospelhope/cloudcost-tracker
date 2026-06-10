@@ -8,82 +8,121 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Monthly Cost Report</h1>
-    <p>Estimated monthly cloud spending across key service categories. 
-      This dashboard provides an early view of budget allocation and overall spending trends.
-    </p>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Cloud Services</a></li>
-        <li><a href="costs.html">Monthly Costs</a></li>
-        <li><a href="budget.html">Budget Planner</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Estimated Monthly Cloud Costs</h2>
+  <header class="app-header">
+
+  <div class="brand">
+    ☁ CloudCost <span>Tracker</span>
+  </div>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">⌂ Home</a></li>
+      <li><a href="services.html">☁ Cloud Services</a></li>
+      <li><a href="costs.html">▥ Monthly Costs</a></li>
+      <li><a href="budget.html">▣ Budget Planner</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-toggle" type="button">
+    ☀ Light Mode
+  </button>
+</header>
+
+<main class="cost-page">
+  <section class="page-hero">
+    <p class="eyebrow">Monthly Report</p>
+    <h1>Monthly Cost Report</h1>
+    <p>Estimated spending across key cloud services for May 2026.</p>
+  </section>
+
+  <section class="cost-summary-grid">
+    <article class="mini-stat">
+      <p>Total Spend</p>
+      <h3>$1,245.00</h3>
+      <small>Current month</small>
+    </article>
+
+    <article class="mini-stat">
+      <p>Budget Limit</p>
+      <h3>$1,500.00</h3>
+      <small>Monthly cap</small>
+    </article>
+
+    <article class="mini-stat">
+      <p>Status</p>
+      <h3>Within Budget</h3>
+      <small>$255 remaining</small>
+    </article>
+  </section>
+
+  <section class="dashboard-card">
+    <h2>Cost Breakdown</h2>
+
+    <div class="modern-table">
       <table>
         <caption>Sample cloud cost breakdown for May 2026</caption>
         <thead>
           <tr>
-            <th scope="col">Service Category</th>
-            <th scope="col">Estimated Cost</th>
-            <th scope="col">Budget Limit</th>
-            <th scope="col">Status</th>
+            <th>Service Category</th>
+            <th>Estimated Cost</th>
+            <th>Budget Limit</th>
+            <th>Status</th>
           </tr>
         </thead>
+
         <tbody>
           <tr>
             <td>Compute</td>
             <td>$520.00</td>
             <td>$650.00</td>
-            <td>On Track</td>
+            <td><span class="status good">On Track</span></td>
           </tr>
           <tr>
             <td>Storage</td>
             <td>$210.00</td>
             <td>$250.00</td>
-            <td>Watch</td>
+            <td><span class="status warning">Watch</span></td>
           </tr>
           <tr>
             <td>Database</td>
             <td>$340.00</td>
             <td>$400.00</td>
-            <td>On Track</td>
+            <td><span class="status good">On Track</span></td>
           </tr>
           <tr>
             <td>Networking</td>
             <td>$175.00</td>
             <td>$200.00</td>
-            <td>Watch</td>
+            <td><span class="status warning">Watch</span></td>
           </tr>
         </tbody>
+
         <tfoot>
           <tr>
-            <th scope="row">Total</th>
+            <th>Total</th>
             <td>$1,245.00</td>
             <td>$1,500.00</td>
-            <td>Within Budget</td>
+            <td><span class="status good">Within Budget</span></td>
           </tr>
         </tfoot>
       </table>
-    </section>
+    </div>
+  </section>
 
-    <aside>
-      <h2>Dashboard Note</h2>
-      <p>Current values are prototype estimates prepared for the first release.
-         Automated calculations, budget alerts, and interactive reporting are planned for the JavaScript enhancement phase.</p>
-    </aside>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 CloudCost Tracker.</p>
+  <section class="dashboard-card insight-card">
+    <h2>Dashboard Note</h2>
+    <p>
+      Current values are prototype estimates prepared for the first release.
+      Automated calculations, budget alerts, and interactive reporting are planned
+      for the JavaScript enhancement phase.
+    </p>
+  </section>
+</main>
+  <footer class="site-footer">
+    <p class="footer-logo">☁</p>
+    <p>&copy; 2026 CloudCost Tracker. Smart budgeting. Smarter decisions.</p>
   </footer>
+
   <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -40,25 +40,38 @@ const budgetMessage = document.getElementById("budgetMessage");
 const budgetPercent = document.getElementById("budgetPercent");
 const circlePercent = document.getElementById("circlePercent");
 
-if (budgetPercent) {
-  budgetPercent.textContent = `${percentage}%`;
-}
-
-if (circlePercent) {
-  circlePercent.textContent = `${percentage}%`;
-}
-
 if (totalSpend && budgetProgress && budgetMessage) {
-
   const spend = 1800;
   const budget = 2000;
-
   const percentage = Math.round((spend / budget) * 100);
 
   totalSpend.textContent = `$${spend.toLocaleString()}.00`;
-
   budgetProgress.value = percentage;
+  budgetMessage.textContent = `${percentage}% of the monthly budget has been used.`;
 
-  budgetMessage.textContent =
-    `${percentage}% of the monthly budget has been used.`;
+  if (budgetPercent) {
+    budgetPercent.textContent = `${percentage}%`;
+  }
+
+  if (circlePercent) {
+    circlePercent.textContent = `${percentage}%`;
+  }
+}
+
+// Dark / light mode toggle
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+  if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    themeToggle.textContent = "🌙 Dark Mode";
+  }
+
+  themeToggle.addEventListener("click", function () {
+    document.body.classList.toggle("light-mode");
+
+    const isLight = document.body.classList.contains("light-mode");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+    themeToggle.textContent = isLight ? "🌙 Dark Mode" : "☀ Light Mode";
+  });
 }

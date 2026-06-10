@@ -8,57 +8,113 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Cloud Services</h1>
-    <p>Review the services included in the cloud budget.</p>
+
+  <header class="app-header">
+    <div class="brand">
+      ☁ CloudCost <span>Tracker</span>
+    </div>
+
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Cloud Services</a></li>
-        <li><a href="costs.html">Monthly Costs</a></li>
-        <li><a href="budget.html">Budget Planner</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="index.html">⌂ Home</a></li>
+        <li><a href="services.html">☁ Cloud Services</a></li>
+        <li><a href="costs.html">▥ Monthly Costs</a></li>
+        <li><a href="budget.html">▣ Budget Planner</a></li>
       </ul>
     </nav>
+    <button id="themeToggle" class="theme-toggle" type="button">
+     ☀ Light Mode
+    </button>
   </header>
 
-  <main>
-    <section>
-      <h2>Tracked Services</h2>
-      <article>
+  <main class="services-page">
+    <section class="page-hero">
+      <p class="eyebrow">Service Inventory</p>
+      <h1>Cloud Services</h1>
+      <p>Review the main cloud service categories driving monthly spend.</p>
+      <p class="service-count">4 services currently tracked</p>
+    </section>
+
+    <section class="service-grid">
+      <article class="service-card">
+        <span class="service-icon">⚙</span>
         <h3>Compute</h3>
         <p>Virtual machines and serverless functions used to run applications.</p>
+        <small>
+          Current status:
+          <span class="status-warning">High Usage</span>
+        </small>
       </article>
-      <article>
+
+      <article class="service-card">
+        <span class="service-icon">▣</span>
         <h3>Storage</h3>
-        <p>Object storage, backups, and file storage used by project teams.</p>
+        <p>Object storage, backups, and project file storage.</p>
+        <small>
+          Current status:
+          <span class="status-warning">Review Needed</span>
+        </small>
       </article>
-      <article>
+
+      <article class="service-card">
+        <span class="service-icon">▤</span>
         <h3>Database</h3>
-        <p>Managed database services used to store application data.</p>
+        <p>Managed database services used for application data.</p>
+        <small>
+          Current status:
+          <span class="status-good">Stable</span>
+        </small>
       </article>
-      <article>
+
+      <article class="service-card">
+        <span class="service-icon">⇄</span>
         <h3>Networking</h3>
-        <p>Load balancers, data transfer, and content delivery services.</p>
+        <p>Load balancing, data transfer, and content delivery services.</p>
+        <small>
+          Current status:
+          <span class="status-info">Moderate Usage</span>
+        </small>
       </article>
     </section>
 
-    <section>
+    <section class="dashboard-card service-details-card">
       <h2>Service Details</h2>
+      <p class="section-intro">
+        These notes explain why each category matters when reviewing cloud costs.
+      </p>
+
       <details>
         <summary>Why track compute costs?</summary>
-        <p>Compute costs can increase quickly when instances are left running or scaled too high.</p>
+        <p>
+          Compute services are often one of the largest contributors to cloud spending.
+          Monitoring idle instances, oversized virtual machines, and unexpected scaling
+          events helps teams avoid unnecessary monthly costs.
+        </p>
       </details>
+
       <details>
         <summary>Why track storage costs?</summary>
-        <p>Storage costs may grow over time when old backups and unused files are not removed.</p>
+        <p>
+          Storage usage tends to grow gradually over time. Old backups, duplicate files,
+          and unused datasets can increase costs without being noticed.
+        </p>
+      </details>
+
+      <details>
+        <summary>Why monitor network costs?</summary>
+        <p>
+          Data transfer charges, content delivery traffic, and external requests can add
+          unexpected costs. Monitoring network activity helps identify usage spikes early.
+        </p>
       </details>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 CloudCost Tracker.</p>
+  <footer class="site-footer">
+    <p class="footer-logo">☁</p>
+    <p>&copy; 2026 CloudCost Tracker. Smart budgeting. Smarter decisions.</p>
   </footer>
+
   <script src="assets/js/script.js"></script>
 </body>
 </html>
