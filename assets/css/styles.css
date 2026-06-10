@@ -5,32 +5,31 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f6f8fc;
-  color: #172033;
+  background: #07111f;
+  color: #e5eefc;
   line-height: 1.6;
 }
 
 header {
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  color: white;
-  padding: 2.5rem 1.5rem;
+  background: linear-gradient(135deg, #07111f, #112a62);
+  padding: 2rem;
   text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.4rem;
+  font-size: 2.3rem;
 }
 
 header p {
-  color: #dbeafe;
-  margin-top: 0.5rem;
+  color: #b8c7e6;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 1.8rem 0 0;
+  margin: 1.5rem 0 0;
   display: flex;
   justify-content: center;
   gap: 0.8rem;
@@ -38,102 +37,210 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: #e5eefc;
   text-decoration: none;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
-nav a:hover {
-  background: white;
-  color: #1e3a8a;
+nav a:hover,
+nav a.active {
+  background: #3b82f6;
+  color: white;
 }
 
 main {
-  max-width: 1150px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+.hero-dashboard,
+.dashboard-card,
 section,
 article,
 aside,
 details {
-  background: white;
-  border-radius: 18px;
-  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.hero-dashboard {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 2rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-  border: 1px solid #e5e7eb;
 }
 
-section h2,
-article h3,
-aside h2,
-details summary {
-  color: #1e3a8a;
+.eyebrow {
+  color: #93c5fd;
+  font-weight: bold;
 }
 
-article {
-  border-left: 6px solid #2563eb;
+.hero-dashboard h2 {
+  font-size: 2.4rem;
+  margin: 0.4rem 0;
 }
 
-aside {
-  border-left: 6px solid #f59e0b;
-  background: #fffbeb;
+.hero-dashboard p {
+  color: #cbd5e1;
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.hero-stats article {
+  padding: 1.2rem;
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.stat-icon {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.hero-stats h3 {
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.hero-stats small {
+  color: #94a3b8;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.two-column {
+  margin-top: 1.5rem;
+}
+
+.dashboard-card {
+  padding: 1.6rem;
+}
+
+.dashboard-card h3 {
+  margin-top: 0;
+  color: #f8fafc;
+}
+
+.large-card {
+  min-height: 350px;
+}
+
+.circle-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.circle-progress {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: conic-gradient(#3b82f6 90%, #1e293b 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 18px #0f172a;
+}
+
+.circle-progress span {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.circle-progress small {
+  color: #cbd5e1;
 }
 
 progress {
   width: 100%;
-  height: 1.1rem;
+  height: 0.8rem;
+  accent-color: #3b82f6;
+}
+
+.warning-box {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #facc15;
+}
+
+.cost-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 80px;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+
+.insight-card {
+  background: linear-gradient(135deg, rgba(20,83,45,0.7), rgba(15,23,42,0.95));
+}
+
+.green-text {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.activity-list {
+  padding-left: 1rem;
+}
+
+.activity-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  padding: 0.7rem 0;
+}
+
+.activity-list span {
+  color: #94a3b8;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  overflow: hidden;
-  border-radius: 14px;
-  margin-top: 1rem;
-  background: white;
-}
-
-caption {
-  font-weight: bold;
-  margin-bottom: 0.8rem;
-  color: #374151;
+  background: rgba(15, 23, 42, 0.9);
 }
 
 th,
 td {
-  padding: 0.95rem;
-  border-bottom: 1px solid #e5e7eb;
-  text-align: left;
+  padding: 0.9rem;
+  border-bottom: 1px solid rgba(148,163,184,0.18);
 }
 
 th {
-  background: #0f172a;
-  color: white;
+  background: #111827;
 }
 
-tr:nth-child(even) {
-  background: #f8fafc;
-}
-
+form,
 fieldset {
-  border: 1px solid #dbe3f0;
-  border-radius: 16px;
-  padding: 1.5rem;
-}
-
-legend {
-  font-weight: bold;
-  color: #1e3a8a;
-}
-
-label {
-  font-weight: bold;
+  max-width: 800px;
 }
 
 input,
@@ -143,69 +250,32 @@ button {
   width: 100%;
   padding: 0.8rem;
   margin-top: 0.35rem;
-  border: 1px solid #cbd5e1;
   border-radius: 10px;
-  font-size: 1rem;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 3px solid #bfdbfe;
-  border-color: #2563eb;
+  border: 1px solid #334155;
 }
 
 button {
   background: #2563eb;
   color: white;
-  border: none;
-  cursor: pointer;
   font-weight: bold;
-}
-
-button:hover {
-  background: #1d4ed8;
-}
-
-figure {
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 16px;
-}
-
-figcaption {
-  color: #64748b;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
+  cursor: pointer;
 }
 
 footer {
-  background: #0f172a;
-  color: white;
   text-align: center;
   padding: 1.5rem;
-  margin-top: 3rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-@media (max-width: 700px) {
-  header h1 {
-    font-size: 1.9rem;
+@media (max-width: 850px) {
+  .hero-dashboard,
+  .dashboard-grid,
+  .hero-stats {
+    grid-template-columns: 1fr;
   }
 
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav a {
-    display: block;
-  }
-
-  th,
-  td {
-    font-size: 0.9rem;
-    padding: 0.65rem;
+  .cost-row {
+    grid-template-columns: 1fr;
   }
 }

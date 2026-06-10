@@ -23,53 +23,104 @@
     </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>Project Overview</h2>
-      <p>
-        CloudCost Tracker gives small teams a simple way to review cloud spending,
-        compare estimated service costs, and understand budget health before expenses
-        become difficult to manage.
-      </p>
-    </section>
+  <main class="dashboard-page">
+  <section class="hero-dashboard">
+    <div>
+      <p class="eyebrow">Welcome back 👋</p>
+      <h2>Cloud spending at a glance</h2>
+      <p>Monitor cloud usage, track budgets, and optimize costs before they scale.</p>
+    </div>
 
-    <section>
-      <h2>Dashboard Summary</h2>
+    <div class="hero-stats">
       <article>
-        <h3>Estimated Monthly Spend</h3>
-        <p><strong>$1,245.00</strong></p>
-        <progress value="62" max="100">62%</progress>
-        <p>62% of the monthly budget has been used.</p>
+        <span class="stat-icon">$</span>
+        <p>Estimated Monthly Spend</p>
+        <h3 id="totalSpend">$1,245.00</h3>
+        <small>of $2,000.00 budget</small>
       </article>
 
       <article>
-        <h3>Active Cloud Services</h3>
-        <p>7 services are currently being tracked.</p>
+        <span class="stat-icon">%</span>
+        <p>Budget Used</p>
+        <h3 id="budgetPercent">62%</h3>
+        <small>Current month usage</small>
       </article>
 
       <article>
-        <h3>Budget Status</h3>
-        <p>The project is currently within budget, but compute usage should be monitored closely.</p>
+        <span class="stat-icon">↗</span>
+        <p>Active Services</p>
+        <h3>7</h3>
+        <small>Across 4 categories</small>
       </article>
-    </section>
+    </div>
+  </section>
 
-    <aside>
-      <h2>Cost Optimization Insight</h2>
-      <p>Unused compute resources and forgotten storage services are common causes of unnecessary cloud spending.
-         Regular reviews can help teams improve cost efficiency and reduce waste.</p>
-    </aside>
+  <section class="dashboard-grid">
+    <article class="dashboard-card large-card">
+      <h3>Budget Usage</h3>
+      <div class="circle-wrap">
+        <div class="circle-progress">
+          <span id="circlePercent">62%</span>
+          <small>used</small>
+        </div>
+      </div>
 
-    <section>
-      <h2>Featured Cloud Cost Categories</h2>
-      <figure>
-        <img src="https://via.placeholder.com/500x220?text=Cloud+Cost+Dashboard" alt="Placeholder preview of a cloud cost dashboard">
-        <figcaption>Dashboard concept showing cloud spending, services, and budget usage.</figcaption>
-      </figure>
-    </section>
-  </main>
+      <progress id="budgetProgress" value="62" max="100"></progress>
+      <p id="budgetMessage">62% of the monthly budget has been used.</p>
 
-  <footer>
-    <p>&copy; 2026 CloudCost Tracker. Created for ITC6355 Web App Design &amp; Development.</p>
-  </footer>
-</body>
-</html>
+      <div class="warning-box">
+        ⚠ You are approaching your budget limit. Review compute usage this week.
+      </div>
+    </article>
+
+    <article class="dashboard-card">
+      <h3>Top Cost Drivers</h3>
+
+      <div class="cost-row">
+        <span>Compute</span>
+        <progress value="45" max="100"></progress>
+        <strong>$810</strong>
+      </div>
+
+      <div class="cost-row">
+        <span>Storage</span>
+        <progress value="25" max="100"></progress>
+        <strong>$450</strong>
+      </div>
+
+      <div class="cost-row">
+        <span>Database</span>
+        <progress value="15" max="100"></progress>
+        <strong>$270</strong>
+      </div>
+
+      <div class="cost-row">
+        <span>Networking</span>
+        <progress value="10" max="100"></progress>
+        <strong>$180</strong>
+      </div>
+    </article>
+  </section>
+
+  <section class="dashboard-grid two-column">
+    <article class="dashboard-card insight-card">
+      <h3>Cost Optimization Insight</h3>
+      <p class="green-text">Potential savings of $120–$180/month</p>
+      <ul>
+        <li>2 compute instances running at low CPU usage</li>
+        <li>1 unused storage volume detected</li>
+        <li>Review auto-scaling rules for predictable workloads</li>
+      </ul>
+    </article>
+
+    <article class="dashboard-card">
+      <h3>Recent Activity</h3>
+      <ul class="activity-list">
+        <li>Compute instance resized <span>2 hours ago</span></li>
+        <li>New storage volume created <span>5 hours ago</span></li>
+        <li>Database backup completed <span>Yesterday</span></li>
+        <li>Budget alert threshold reached <span>2 days ago</span></li>
+      </ul>
+    </article>
+  </section>
+</main>
